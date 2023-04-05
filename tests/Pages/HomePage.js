@@ -1,7 +1,7 @@
-const { BasePage } = require('../Pages/BasePage')
-const { EGiftCardsType } = require('../Pages/GiftCards/EGiftCardsType')
-const { expect } = require('@playwright/test');
-exports.HomePage = class HomePage extends BasePage {
+import { BasePage } from '../Pages/BasePage';
+import { EGiftCardsType } from '../Pages/GiftCards/EGiftCardsType';
+import { expect } from '@playwright/test';
+export class HomePage extends BasePage {
     constructor(page) {
         super(page)
 

@@ -1,5 +1,5 @@
 // @ts-check
-const { defineConfig, devices } = require('@playwright/test');
+import { defineConfig, devices } from '@playwright/test';
 
 /**
  * Read environment variables from file.
@@ -10,7 +10,8 @@ const { defineConfig, devices } = require('@playwright/test');
 /**
  * @see https://playwright.dev/docs/test-configuration
  */
-module.exports = defineConfig({
+// eslint-disable-next-line no-undef
+export default defineConfig({
   testDir: './tests',
   globalTimeout: 30 * 10000,
   expect: {

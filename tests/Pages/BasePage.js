@@ -1,4 +1,4 @@
-exports.BasePage = class BasePage {
+export class BasePage {
     constructor(page) {
         this.page = page
         this.URL = 'https://www.amazon.com/'
@@ -7,6 +7,8 @@ exports.BasePage = class BasePage {
         this.link = 'link'
         this.dateToday = 'Today'
         this.networkidle = 'networkidle'
+        this.domcontentloaded = 'domcontentloaded'
+        this.addToCartButton = 'Add to cart'
     }
 
     async ClickToButtonByName(buttonName) {

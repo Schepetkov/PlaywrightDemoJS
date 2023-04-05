@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/Schepetkov/PlaywrightDemoJS#readme",
   "devDependencies": {
-    "@playwright/test": "^1.32.2"
+    "@playwright/test": "^1.32.2",
+    "eslint": "^8.37.0"
   }
 }

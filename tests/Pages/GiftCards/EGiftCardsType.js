@@ -1,4 +1,4 @@
-exports.EGiftCardsType = class EGiftCardsType {
+export class EGiftCardsType {
     static EGiftCards = new EGiftCardsType('EGiftCard')
     static PrintHomeGiftCard = new EGiftCardsType('PrintHomeGiftCard')
     // etc..

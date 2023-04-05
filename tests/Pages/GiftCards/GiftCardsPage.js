@@ -1,6 +1,6 @@
-const { BasePage } = require('../BasePage')
-const { expect } = require('@playwright/test');
-exports.GiftCardsPage = class GiftCardsPage extends BasePage {
+import { BasePage } from '../BasePage';
+import { expect } from '@playwright/test';
+export class GiftCardsPage extends BasePage {
     constructor(page) {
         super(page)
 
@@ -14,10 +14,14 @@ exports.GiftCardsPage = class GiftCardsPage extends BasePage {
         this.totalAmount = 0
     }
 
-    async ValidateTotalAmount() {
+    async ValidateTotalAmountOnCartPage() {
         await expect.soft(this.page.locator('#sw-subtotal').getByText(`${this.totalAmount}.`, { exact: true })).toHaveText(`${this.totalAmount}.`)
         await expect.soft(this.page.locator('#sw-subtotal').getByText(`$${this.totalAmount}.00`).nth(1)).toHaveText(`$${this.totalAmount}.00`)
         await expect(this.page.locator('#ewc-content').getByText(`$${this.totalAmount}.00`).first()).toHaveText(`$${this.totalAmount}.00`)
+    }
+
+    async ValidateTotalAmount() {
+        await expect(await this.page.locator('#gc-buy-box-text').getByText(`$${this.totalAmount}.00`)).toHaveText(`$${this.totalAmount}.00`)
     }
 
     async EnterGiftCardDetails(amount, customAmount, deliveryEmail, from, message, quantity, deliveryDate) {
