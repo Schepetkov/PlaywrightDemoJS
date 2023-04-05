@@ -1,0 +1,21 @@
+{
+  "name": "playwrightdemojs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schepetkov/PlaywrightDemoJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Schepetkov/PlaywrightDemoJS/issues"
+  },
+  "homepage": "https://github.com/Schepetkov/PlaywrightDemoJS#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.32.2"
+  }
+}
